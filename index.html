@@ -66,16 +66,12 @@
         .word {
             display: inline-flex;
             white-space: nowrap;
-        }
-
-        .letter {
-            display: inline-block;
             opacity: 0;
             transform: translateY(-50px) rotateX(90deg);
-            animation: letterPop 0.8s ease forwards;
+            animation: wordPop 0.8s ease forwards;
         }
 
-        @keyframes letterPop {
+        @keyframes wordPop {
             0% {
                 opacity: 0;
                 transform: translateY(-50px) rotateX(90deg) scale(0.5);
@@ -273,11 +269,11 @@
     <canvas id="canvas"></canvas>
     
     <!-- Music Control -->
-    <button class="music-control" id="musicBtn" title="Tắt nhạc">🔇</button>
+    <button class="music-control" id="musicBtn" title="Bật nhạc">🎵</button>
     
     <!-- Hidden audio element -->
     <audio id="backgroundMusic" loop>
-        <source src="data:audio/wav;base64,UklGRnoGAABXQVZFZm10IBAAAAABAAEAQB8AAEAfAAABAAgAZGF0YQoGAACBhYqFbF1fdJivrJBhNjVgodDbq2EcBj+a2/LDciUFLIHO8tiJNwgZaLvt559NEAxQp+PwtmMcBjiR1/LMeSwFJHfH8N2QQAoUXrTp66hVFApGn+DyvmEeCD2Y2vHFdSgELITN8tiJNwgZaLvt559NEAxQp+PwtmMcBjiR1/LMeSwFJHfH8N2QQAoUXrTp66hVFApGn+DyvmEeCD2Y2vHFdSgELITN8tiJNwgZaLvt559NEAxQp+PwtmMcBjiR1/LMeSwFJHfH8N2QQAoUXrTp66hVFApGn+DyvmEeCD2Y2vHFdSgELITN8tiJNwgZaLvt559NEAxQp+PwtmMcBjiR1/LMeSwFJHfH8N2QQAoUXrTp66hVFApGn+DyvmEeCD2Y2vHFdSgELITN8tiJNwgZaLvt559NEAxQp+PwtmMcBjiR1/LMeSwFJHfH8N2QQAoUXrTp66hVFApGn+DyvmEeCD2Y2vHFdSgELITN8tiJNwgZaLvt559NEAxQp+PwtmMcBjiR1/LMeSwFJHfH8N2QQAoUXrTp66hVFApGn+DyvmEeCD2Y2vHFdSgELITN8tiJNwgZaLvt559NEAxQp+PwtmMcBjiR1/LMeSwFJHfH8N2QQAoUXrTp66hVFApGn+DyvmEeCD2Y2vHFdSgELITN8tiJNwgZaLvt559NEAxQp+PwtmMcBjiR1/LMeSwFJHfH8N2QQAoUXrTp66hVFApGn+DyvmEeCD2Y2vHFdSgELITN8tiJNwgZaLvt559NEAxQp+PwtmMcBjiR1/LMeSwFJHfH8N2QQAoUXrTp66hVFApGn+DyvmEeCD2Y2vHFdSgELITN8tiJNwgZaLvt559NEAxQp+PwtmMcBjiR1/LMeSwFJHfH8N2QQAoUXrTp66hVFApGn+DyvmEeCD2Y2vHFdSgELITN8tiJNwgZaLvt559NEAxQp+PwtmMcBjiR1/LMeSwFJHfH8N2QQAoUXrTp66hVFApGn+DyvmEeCD2Y2vHFdSgELITN8tiJNwgZaLvt559NEAxQp+PwtmMcBjiR1/LMeSwFJHfH8N2QQAoUXrTp66hVFApGn+DyvmEeCDY=" type="audio/wav">
+        <source src="data:audio/wav;base64,UklGRnoGAABXQVZFZm10IBAAAAABAAEAQB8AAEAfAAABAAgAZGF0YQoGAACBhYqFbF1fdJivrJBhNjVgodDbq2EcBj+a2/LDciUFLIHO8tiJNwgZaLvt559NEAxQp+PwtmMcBjiR1/LMeSwFJHfH8N2QQAoUXrTp66hVFApGn+DyvmEeCD2Y2vHFdSgELITN8tiJNwgZaLvt559NEAxQp+PwtmMcBjiR1/LMeSwFJHfH8N2QQAoUXrTp66hVFApGn+DyvmEeCD2Y2vHFdSgELITN8tiJNwgZaLvt559NEAxQp+PwtmMcBjiR1/LMeSwFJHfH8N2QQAoUXrTp66hVFApGn+DyvmEeCD2Y2vHFdSgELITN8tiJNwgZaLvt559NEAxQp+PwtmMcBjiR1/LMeSwFJHfH8N2QQAoUXrTp66hVFApGn+DyvmEeCD2Y2vHFdSgELITN8tiJNwgZaLvt559NEAxQp+PwtmMcBjiR1/LMeSwFJHfH8N2QQAoUXrTp66hVFApGn+DyvmEeCD2Y2vHFdSgELITN8tiJNwgZaLvt559NEAxQp+PwtmMcBjiR1/LMeSwFJHfH8N2QQAoUXrTp66hVFApGn+DyvmEeCD2Y2vHFdSgELITN8tiJNwgZaLvt559NEAxQp+PwtmMcBjiR1/LMeSwFJHfH8N2QQAoUXrTp66hVFApGn+DyvmEeCD2Y2vHFdSgELITN8tiJNwgZaLvt559NEAxQp+PwtmMcBjiR1/LMeSwFJHfH8N2QQAoUXrTp66hVFApGn+DyvmEeCD2Y2vHFdSgELITN8tiJNwgZaLvt559NEAxQp+PwtmMcBjiR1/LMeSwFJHfH8N2QQAoUXrTp66hVFApGn+DyvmEeCD2Y2vHFdSgELITN8tiJNwgZaLvt559NEAxQp+PwtmMcBjiR1/LMeSwFJHfH8N2QQAoUXrTp66hVFApGn+DyvmEeCDY=" type="audio/wav">
         Trình duyệt không hỗ trợ audio.
     </audio>
     
@@ -294,21 +290,31 @@
         
         function animateText() {
             const totalTime = 10000; // 10 seconds
-            const delayPerLetter = totalTime / text.length;
+            const words = text.split(' ');
+            const delayPerWord = totalTime / words.length;
             
-            text.split('').forEach((letter, index) => {
+            words.forEach((word, index) => {
                 const span = document.createElement('span');
-                span.textContent = letter === ' ' ? '\u00A0' : letter;
-                span.classList.add('letter');
-                span.style.animationDelay = `${index * (delayPerLetter / 1000)}s`;
+                span.textContent = word;
+                span.classList.add('word');
+                span.style.animationDelay = `${index * (delayPerWord / 1000)}s`;
                 mainText.appendChild(span);
+                // Add space after each word except the last
+                if (index < words.length - 1) {
+                    mainText.appendChild(document.createTextNode(' '));
+                }
             });
             
-            // Highlight after all letters are shown
+            // Highlight and start music after all words are shown
             setTimeout(() => {
                 mainText.classList.add('highlight');
                 document.querySelector('.birthday-message').style.animationPlayState = 'running';
-            }, totalTime + 1000);
+                // Start music
+                isPlaying = true;
+                musicBtn.textContent = '🔇';
+                musicBtn.title = 'Tắt nhạc';
+                initAudio();
+            }, totalTime);
         }
 
         // Music control
@@ -600,12 +606,6 @@
             animateText();
             createSparkles();
             createFloatingCakes();
-            
-            // Auto start music on load
-            isPlaying = true;
-            musicBtn.textContent = '🔇';
-            musicBtn.title = 'Tắt nhạc';
-            initAudio();
         });
     </script>
 </body>
